@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: #808080;
+}
+.main-container {
+  background-color: #ffffff;
+  width: 50%;
+  margin: 0 auto;
+}
+.main-container .title {
+  text-align: center;
+  padding: 1rem;
+}
+/* Creates a horizontal line when applied to a div */
+.horizontal-line {
+  height: 1px;
+  background-color: rgb(134, 134, 134);
+}
+.todo-form {
+  display: flex;
+  flex-direction: column;
+}
+.todo-form #description {
+  display: flex;
+  padding: 1rem;
+}
+.category-date {
+  display: flex;
+}
+.category-date #category,
+#due_date {
+  padding: 0.5rem;
+  margin-top: 0.2rem;
+}
+
+.category-date .taskdate {
+  margin-left: 1rem;
+}
+.action-buttons #add-button,
+#delete-button {
+  padding: 0.4rem;
+}
+.todo {
+  display: flex;
+  flex-direction: row;
+  margin-left: 1rem;
+}
+.todo .todo-data {
+  flex: 1;
+  margin-left: 1rem;
+}
+.action-buttons {
+  width: 50%;
+  text-align: center;
+  margin-left: 11rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+#delete-button {
+  margin-left: 1rem;
+}
+
+#category,
+#description,
+#due_date,
+#add-button,
+#delete-button {
+  border: none;
+  outline: none;
+}
+
+#category-button {
+  height: 40px;
+
+  margin: 1rem;
+}
+
+#action-buttons button * {
+  color: white;
+}

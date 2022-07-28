@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/todo.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <h1 class="title"><%= title %></h1>
+      <div class="horizontal-line"></div>
+      <form class="todo-form" action="/action/create-todo" method="post">
+        <div class="description">
+          <label for="description">Description</label>
+          <input
+            type="text"
+            name="description"
+            id="description"
+            placeholder="What do you need to do?"
+            required
+          />
+        </div>
+        <div class="horizontal-line"></div>
+        <div class="category-date">
+          <div class="category">
+            <label for="category">CATEGORY</label>
+            <select name="category" id="category">
+              <option value="">Choose a Category</option>
+              <option value="personal" selected>Personal</option>
+              <option value="work">Work</option>
+              <option value="school">School</option>
+              <option value="cleaning">Cleaning</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="taskdate">
+            <label for="due_date">DUE DATE</label>
+            <input type="date" id="due_date" name="due_date" />
+          </div>
+        </div>
+        <!-- Separator -->
+        <div class="horizontal-line"></div>
+
+        <div class="action-buttons">
+          <!-- button to add a new task and sumbit form -->
+          <button id="add-button" type="submit">
+            <i class="fas fa-plus"></i>
+            <span>Add Task</span>
+          </button>
+
+          <!-- button to delete all the selected tasks -->
+          <button id="delete-button" type="submit" form="todo-list-form">
+            <i class="fas fa-trash-alt"></i>
+            <span>Delete Tasks</span>
+          </button>
+        </div>
+      </form>
+
+      <!-- list  all the todo stored in the todo table -->
+      <form action="/action/delete-todo" method="post" id="todo-list-form">
+        <% for(let i of todo_list){%>
+        <div>
+          <div class="horizontal-line"></div>
+          <div class="todo">
+            <input id="check" type="checkbox" name="id" value="<%= i.id %>" />
+            <div class="todo-data">
+              <p><%= i.description %></p>
+              <i class="fas fa-calendar-alt"></i>
+              <span> <%= i.due_date %> </span>
+            </div>
+            <button type="button" id="category-button">
+              <%= i.category %>
+            </button>
+          </div>
+        </div>
+        <%}%>
+      </form>
+    </div>
+    <script type="text/javascript" src="/js/delete_style.js"></script>
+  </body>
+</html>
