@@ -4,11 +4,13 @@ const Todo = require('../models/todo');
 module.exports.create = function (req, res) {
   // insert record
   let due_date = req.body.due_date;
-
+  console.log(due_date);
   if (req.body.due_date.length == 0) {
     due_date = 'No Deadline';
+  } else {
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    due_date = new Date(due_date).toLocaleDateString('en-US', options);
   }
-
   Todo.create(
     {
       description: req.body.description,
