@@ -4,9 +4,11 @@ const Todo = require('../models/todo');
 module.exports.create = function (req, res) {
   // insert record
   let due_date = req.body.due_date;
+
   if (req.body.due_date.length == 0) {
     due_date = 'No Deadline';
   }
+
   Todo.create(
     {
       description: req.body.description,
@@ -22,7 +24,7 @@ module.exports.create = function (req, res) {
   );
   return res.redirect('back');
 };
-
+//  delete records
 module.exports.delete = function (req, res) {
   if (req.body.id == undefined) {
     console.log("User haven't selected any task to delete");
