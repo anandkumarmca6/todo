@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: #808080;
+  font-family: sans-serif;
+}
+.main-container {
+  background-color: #ffffff;
+  width: 50%;
+  margin: 0 auto;
+}
+.main-container .title {
+  text-align: center;
+  color: darkgrey;
+  padding-top: 1rem;
+}
+/* Creates a horizontal line when applied to a div */
+.horizontal-line {
+  height: 1px;
+  background-color: lightgrey;
+}
+
+/* todo add form style */
+.todo-form {
+  display: flex;
+  flex-direction: column;
+}
+.todo-form #description {
+  display: flex;
+  padding: 1rem;
+}
+.category-date {
+  display: flex;
+}
+.category-date #category,
+#due_date {
+  padding: 0rem 11rem 1rem 0.5rem;
+  margin-top: 0.2rem;
+}
+
+.category-date .taskdate {
+  margin-left: 1rem;
+}
+/* todo add and delete buttons */
+.action-buttons #add-button {
+  padding: 1.1rem 3rem 1.1rem 1.1rem;
+}
+.action-buttons {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+#delete-button {
+  margin-left: 0.1rem;
+  background-color: #ee351e;
+  padding: 1.1rem 1rem 1.1rem 1.1rem;
+}
+#add-button {
+  background-color: #444444;
+}
+#category,
+#description,
+#due_date,
+#add-button,
+#delete-button {
+  border: none;
+  outline: none;
+}
+.action-buttons span {
+  color: white;
+}
+/* todo add form icons */
+.todo-form .fas {
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+/* todo list */
+.todo {
+  display: flex;
+  flex-direction: row;
+  margin-left: 1rem;
+}
+.todo .todo-data {
+  flex: 1;
+  margin-left: 1rem;
+}
+/* todo list category button */
+#category-button {
+  height: 40px;
+  width: 100px;
+  color: white;
+  margin: 1rem;
+  font-family: sans-serif;
+  font-size: 0.7rem;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+}
+
+/* Creates a vertical line when applied to a div */
+.vertical-line {
+  width: 1px;
+  height: auto;
+  background-color: lightgrey;
+  margin-left: 10px;
+}
+/* all labels */
+label {
+  font-family: sans-serif;
+  font-size: 0.9rem;
+  margin-left: 0.6rem;
+  font-weight: 500;
+}
+
+/* todo list calendar icon */
+.fa-calendar-alt {
+  color: lightsteelblue;
+}
