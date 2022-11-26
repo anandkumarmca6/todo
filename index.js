@@ -1,5 +1,7 @@
+require('dotenv').config();
+const env = require('./config/environment');
 const express = require('express');
-const port = 8000;
+const port = env.port;
 
 const app = express();
 
@@ -7,7 +9,7 @@ const app = express();
 const db = require('./config/mongoose');
 
 // set path for static files
-app.use(express.static('./assets'));
+app.use(express.static(env.asset_path));
 // Use express route
 app.use('/', require('./routes'));
 // Set up view engine
