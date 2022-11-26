@@ -2,7 +2,7 @@ const development = {
   name: 'development',
   asset_path: '/assets',
   db: 'todo_development',
-  port: 80,
+  port: 6264,
 };
 
 const production = {
