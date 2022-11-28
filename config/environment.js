@@ -1,8 +1,7 @@
 const development = {
   name: 'development',
   asset_path: '/assets',
-  db: 'todo_development',
-  port: 8000,
+  port: 6141,
 };
 
 const production = {
