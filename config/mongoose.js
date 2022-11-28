@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 // connect to mongo db database
 //mongoose.connect('mongodb://localhost/todo_development');
 mongoose.connect(
-  'mongodb://mongo:1bPtE21zfZB6VQCgZMLp@containers-us-west-121.railway.app:7924'
+  'mongodb://mongo:Ma74isahXkTcwZAOgxmQ@containers-us-west-18.railway.app:6141'
 );
 const db = mongoose.connection;
 
